@@ -1,15 +1,18 @@
-import { Navbar, Container, Nav } from 'react-bootstrap'
+import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 function Navigator () {
   return (
-    <Navbar bg="dark" variant="dark">
-      <Container>
-        <Navbar.Brand href="/">Home</Navbar.Brand>
-        <Nav className="me-auto">
-          <Nav.Link href="/ToDoList">To do List</Nav.Link>
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar.Brand href="/">
+        Graphus Project
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mr-auto">
+          <Nav.Link href="/ToDoList">To do list</Nav.Link>
           <Nav.Link href="/Progress">Progress</Nav.Link>
         </Nav>
-      </Container>
+      </Navbar.Collapse>
     </Navbar>
   )
 }
